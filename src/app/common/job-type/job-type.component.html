@@ -1,0 +1,22 @@
+<div class="w-full xl:px-[12vw] lg:px-[6em] md:px-[5em] py-[6em] bg-gray-200 flex justify-center items-center flex-col">
+
+  <h2 class=" text-[1.7em] font-jakartaSansBold">Need something done?</h2>
+  <div class="h-[4px] bg-gray-500 w-[5em] mt-3"></div>
+  <div class="grid grid-cols-4 gap-3 w-full mt-[3em]">
+    <div *ngFor="let work of works" class="flex flex-col justify-center text-center gap-3 items-center">
+      <img [src]="work.imgUrl" class="h-[6em]" alt="">
+      <h4 class="text-lg font-jakartaSansBold">{{work.title}}</h4>
+      <p class=" text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+
+  <h2 class=" text-[1.7em] font-jakartaSansBold mt-[3em]">What's great about it?</h2>
+  <div class="h-[4px] bg-gray-500 w-[5em] mt-3"></div>
+  <div class="grid grid-cols-4 gap-3 w-full mt-[3em]">
+    <div *ngFor="let benefit of benefits" class="flex flex-col justify-center text-center gap-3 items-center">
+      <img [src]="benefit.imgUrl" class="h-[6em]" alt="">
+      <h4 class="text-lg font-jakartaSansBold">{{benefit.title}}</h4>
+      <p class=" text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+</div>

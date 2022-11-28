@@ -1,0 +1,39 @@
+<div class="w-full xl:px-[12vw] lg:px-[6em] md:px-[5em] py-[6em] maind-ads-bg">
+  <div class="w-full flex justify-between items-center">
+    <div class="flex flex-col">
+      <h1 class=" font-jakartaSansBold text-white text-[4em] leading-[1.2em]">
+        Find the perfect <br><span class=" italic font-jakartaSansBold">freelance</span>  services for <br> your career
+      </h1>
+      <p class=" text-white mt-[2em] leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Vehicula massa in enim luctus. Rutrum arcu.</p>
+      <div class="flex items-center rounded-xl justify-between bg-white p-2 mt-[2em] w-[70%]">
+        <p class="ml-2">Try "Nail Artist"</p>
+        <button type="button" [class]="styles.getButtonStyle('darkBlue')" class="px-[3em] py-[1em] gap-2 flex">
+          Search
+          <fa-icon [icon]="faSearch" size="lg"></fa-icon>
+        </button>
+      </div>
+      <div class="flex justify-between items-center mt-[2em] w-[70%]">
+        <div class="flex text-white items-center gap-3">
+          <h2 class=" font-jakartaSansSemiBold text-[2.5em]">2943</h2>
+          <p class=" text-sm">Client <br>Satisfied</p>
+        </div>
+        <app-lines></app-lines>
+        <div class="flex text-white items-center gap-3">
+          <h2 class=" font-jakartaSansSemiBold text-[2.5em]">₱1M+</h2>
+          <p class=" text-sm">Transaction <br>Completed</p>
+        </div>
+      </div>
+    </div>
+    <div class="h-full">
+      <!-- <img src="assets/imgs/man-welding.png" class="h-[37em] rounded-2xl shadow-lg" alt=""> -->
+      <div class="flex flex-col justify-end main-img-ads h-[37em] w-[28em] rounded-2xl shadow-lg">
+        <div class="flex flex-col items-end gap-3 px-6 bg-gradient-to-t rounded-br-2xl rounded-bl-2xl justify-center h-[10em] from-pink-500">
+          <p class=" text-white text-sm  mr-0"> Carlos Santos, <span class=" font-jakartaSansSemiBold">Carpenter</span></p>
+          <app-stars></app-stars>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="h-[6em] w-full bg-gray-300"></div>
+

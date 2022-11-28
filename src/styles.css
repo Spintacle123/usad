@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow-x: hidden;
+}
+
+*{
+  font-family: "JakarSansRegular";
+}
+
+@font-face {
+  font-family: "JakarSansRegular";
+  src: url("../src/assets/fonts/PlusJakartaSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "JakarSansLight";
+  src: url("../src/assets/fonts/PlusJakartaSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "JakarSansBold";
+  src: url("../src/assets/fonts/PlusJakartaSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "JakarSansSemiBold";
+  src: url("../src/assets/fonts/PlusJakartaSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "JakarSansMedium";
+  src: url("../src/assets/fonts/PlusJakartaSans-Medium.ttf");
+}
+
+@keyframes rotateInfinite {
+  0%{
+    transform: rotate(0deg);
+  }
+  0%{
+    transform: rotate(360deg);
+  }
+}
+
+.animateCircle{
+  animation: rotateInfinite 2s infinite linear;
+}

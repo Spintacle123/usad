@@ -1,0 +1,105 @@
+<svg width="1512" height="855" viewBox="0 0 1512 855" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_90_699)" >
+    <rect width="1512" height="855" fill="#512657" />
+    <g opacity="0.5" filter="url(#filter0_f_90_699)" class="animateCircle1">
+      <circle cx="296.406" cy="805.208"  r="383.5" transform="rotate(-7.95941 296.406 805.208)" fill="#9747FF"/>
+    </g>
+    <g opacity="0.5" filter="url(#filter1_f_90_699)" class="animateCircle2">
+      <circle cx="1400.57" cy="729.584" r="383.5" transform="rotate(-7.95941 1400.57 729.584)" fill="#FACA21"/>
+    </g>
+    <g opacity="0.5" filter="url(#filter2_f_90_699)" class="animateCircle3">
+      <circle cx="783.542" cy="-123.19" r="383.5" transform="rotate(-7.95941 783.542 -123.19)" fill="#FF44EC"/>
+    </g>
+    <g filter="url(#filter3_b_90_699)">
+    <rect width="1512" height="855" fill="white" fill-opacity="0.02"/>
+    </g>
+  </g>
+  <defs>
+  <filter id="filter0_f_90_699" x="-337.141" y="171.661" width="1267.09" height="1267.09" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+  <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_90_699"/>
+  </filter>
+  <filter id="filter1_f_90_699" x="767.024" y="96.0367" width="1267.09" height="1267.09" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+  <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_90_699"/>
+  </filter>
+  <filter id="filter2_f_90_699" x="149.995" y="-756.738" width="1267.09" height="1267.09" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+  <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_90_699"/>
+  </filter>
+  <filter id="filter3_b_90_699" x="-160" y="-160" width="1832" height="1175" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feGaussianBlur in="BackgroundImageFix" stdDeviation="80"/>
+  <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_90_699"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_90_699" result="shape"/>
+  </filter>
+  <clipPath id="clip0_90_699">
+  <rect width="1512" height="855" fill="white"/>
+  </clipPath>
+  </defs>
+  <style>
+    @keyframes rotateInfinite1 {
+      25%{
+        transform: translateX(40vw);
+      }
+      50%{
+        transform: translateY(-40vh);
+      }
+      75%{
+        transform: translateX(-40vw);
+      }
+      100%{
+        transform: translateY(40vh);
+      }
+    }
+
+    @keyframes rotateInfinite2 {
+      25%{
+        transform: translateY(-40vh);
+      }
+      50%{
+        transform: translateX(-40vw);
+      }
+      75%{
+        transform: translateY(40vh);
+      }
+      100%{
+        transform: translateX(40vw);
+      }
+    }
+
+    @keyframes rotateInfinite3 {
+
+      25%{
+        transform: translateX(-40vw);
+      }
+      50%{
+        transform: translateY(40vh);
+      }
+      75%{
+        transform: translateX(40vw);
+      }
+      100%{
+        transform: translateY(-40vh);
+      }
+    }
+
+    .animateCircle1{
+      animation: rotateInfinite1 7s infinite linear alternate;
+      animation-delay: 1s;
+    }
+    .animateCircle2{
+      animation: rotateInfinite2 7s infinite linear alternate;
+      animation-delay: 1s;
+    }
+    .animateCircle3{
+      animation: rotateInfinite3 7s infinite linear alternate;
+      animation-delay: 1s;
+    }
+  </style>
+</svg>
+
+

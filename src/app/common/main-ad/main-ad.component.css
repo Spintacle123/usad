@@ -1,0 +1,11 @@
+.maind-ads-bg{
+  background-image: url("/assets/imgs/svg/bg-animated.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-img-ads{
+  background-image: url('/assets/imgs/man-welding.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

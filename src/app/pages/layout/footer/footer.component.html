@@ -1,0 +1,70 @@
+<footer class="bg-white shadow-lg flex w-screen">
+  <div class="bg-white border-gray-200 px-2 sm:px-4 py-10 rounded dark:bg-gray-900 w-screen">
+    <div class="container grid grid-cols-6 items-start justify-between  mx-auto">
+      <div class="flex flex-col justify-start items-center gap-4">
+        <div>
+          <img src="/assets/imgs/USAD 6.png" class="h-[2.6em]" alt="">
+        </div>
+        <div class="flex gap-3">
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/imgs/svg/facebook.svg" class="h-[1em]" alt="">
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/imgs/svg/twitter.svg" class="h-[1em]" alt="">
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/imgs/svg/instagram.svg" class="h-[1em]" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="w-full flex flex-col justify-start items-start">
+        <ul class="mb-8 space-y-4 text-left text-sm text-gray-800 dark:text-gray-400">
+            <li class="flex items-center space-x-3">
+              <span class="font-jakartaSansBold text-lg">COMPANY</span>
+            </li>
+            <li class="flex items-center space-x-3" *ngFor="let comps of company">
+                <span>{{comps.title}}</span>
+            </li>
+        </ul>
+      </div>
+      <div class="w-full flex flex-col justify-start items-start">
+        <ul class="mb-8 space-y-4 text-left text-sm text-gray-800 dark:text-gray-400">
+            <li class="flex items-center space-x-3">
+              <span class="font-jakartaSansBold text-lg">POLICIES</span>
+            </li>
+            <li class="flex items-center space-x-3" *ngFor="let poli of policy">
+                <span>{{poli.title}}</span>
+            </li>
+        </ul>
+      </div>
+      <div class="w-full flex flex-col justify-start items-start">
+        <ul class="mb-8 space-y-4 text-left text-sm text-gray-800 dark:text-gray-400">
+            <li class="flex items-center space-x-3">
+              <span class="font-jakartaSansBold text-lg">DISCOVER</span>
+            </li>
+            <li class="flex items-center space-x-3" *ngFor="let disc of discover">
+                <span>{{disc.title}}</span>
+            </li>
+        </ul>
+      </div>
+      <div class="col-span-2 w-full flex flex-col justify-start items-start">
+        <ul class="mb-8 space-y-4 text-left text-sm text-gray-800 dark:text-gray-400 w-full">
+            <li class="flex items-center space-x-3">
+              <span class="font-jakartaSansBold text-lg">GET TO KNOW ABOUT OUR LATEST GIGS</span>
+            </li>
+            <li class="flex items-center w-full">
+              <form class="flex items-center w-full">
+                  <label for="voice-search" class="sr-only">Email</label>
+                  <div class="relative w-full">
+                      <input type="text" id="voice-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="E-mail" required>
+                      <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3">
+                          <fa-icon [icon]="faArrowRightLong"></fa-icon>
+                      </button>
+                  </div>
+              </form>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
