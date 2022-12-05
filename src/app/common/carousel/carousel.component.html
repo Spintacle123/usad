@@ -1,0 +1,28 @@
+<div class="w-full flex items-center justify-center gap-4">
+  <div class="mr-[-2em] z-20 mt-[-5em] cursor-pointer hover:opacity-70">
+    <div class="flex justify-center items-center text-gray-600 border-2 bg-white shadow-lg rounded-full h-[3.5em] w-[3.5em]"
+    (click)="setActivePage('sub')"
+    >
+      <p class=" text-gray-700">
+        <fa-icon [icon]="faArrowLeft" size="lg"></fa-icon>
+      </p>
+    </div>
+  </div>
+  <div class="w-full flex flex-col justify-center gap-4">
+    <div class="w-full">
+      <img [src]="activeImage.imgUrl" class="h-[30em] w-[50em] animate-fade-in" alt="">
+    </div>
+    <div class="w-full flex gap-2">
+      <img *ngFor="let img of listOfImages" class="h-[6em] cursor-pointer hover:opacity-60" (click)="setActiveSlide(img)" [src]="img.imgUrl" [alt]="img.label">
+    </div>
+  </div>
+  <div class="ml-[-2em] z-20 mt-[-5em] cursor-pointer hover:opacity-60">
+    <div class="flex justify-center items-center text-gray-600 border-2 bg-white shadow-lg rounded-full h-[3.5em] w-[3.5em]"
+    (click)="setActivePage('add')"
+    >
+      <p class=" text-gray-700">
+        <fa-icon [icon]="faArrowRight" size="lg"></fa-icon>
+      </p>
+    </div>
+  </div>
+</div>
