@@ -1,7 +1,12 @@
-<div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+<div class="text-sm flex items-center gap-6  bg-white font-medium text-center z-30 text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
   <ul class="flex flex-wrap -mb-px">
-      <li class="mr-2" *ngFor="let nav of navBar">
-          <a href="#" class="inline-block p-4 rounded-t-lg" [class]="nav.isActive ? 'text-blue-600 active rounded-t-lg border-b-2 dark:text-blue-500 dark:border-blue-500 border-blue-600': 'border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'">{{nav.label}}</a>
+      <li class="mr-2 cursor-pointer" *ngFor="let nav of navBar">
+          <a (click)="navigateTo(nav.router)" class="inline-block p-4 rounded-t-lg" [class]="nav.isActive ? 'text-blue-600 active rounded-t-lg border-b-2 dark:text-blue-500 dark:border-blue-500 border-blue-600': 'border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'">{{nav.label}}</a>
       </li>
   </ul>
+  <div class="flex gap-7">
+    <img src="/assets/imgs/svg/Vector-2.svg" class="h-[1.2em] hover:opacity-70 cursor-pointer" alt="">
+    <img src="/assets/imgs/svg/flag.svg" class="h-[1.2em] hover:opacity-70 cursor-pointer" alt="">
+    <img src="/assets/imgs/svg/share.svg" class="h-[1.2em] hover:opacity-70 cursor-pointer" alt="">
+  </div>
 </div>

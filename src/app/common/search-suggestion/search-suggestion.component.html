@@ -1,0 +1,17 @@
+<div class=" absolute flex flex-col shadow-2xl p-4 mt-2 bg-white rounded-lg h-[10em] w-[40em] overflow-y-auto">
+  <div class="flex gap-3" *ngIf="search == ''">
+    <img src="/assets/imgs/svg/recent.svg" class="h-[1em]" alt="">
+    <p class=" text-[0.7em] font-jakartaSansBold">RECENT SEARCHES</p>
+  </div>
+  <div class="flex gap-3" *ngIf="search != ''">
+    <p class=" text-[0.7em] font-jakartaSansBold">SUGGESTIONS</p>
+  </div>
+  <div class="flex flex-col gap-3 text-[0.8em] py-4 px-4" *ngIf="search == ''">
+    <p class=" cursor-pointer hover:font-jakartaSansBold hover:ml-2 transition-all">dj</p>
+    <p class=" cursor-pointer hover:font-jakartaSansBold hover:ml-2 transition-all">Carpenter</p>
+    <p class=" cursor-pointer hover:font-jakartaSansBold hover:ml-2 transition-all">nail Artist</p>
+  </div>
+  <div class="flex flex-col gap-3 text-[0.8em] py-4 px-4" *ngIf="search != ''">
+    <p class=" cursor-pointer hover:font-jakartaSansBold hover:ml-2 transition-all" *ngFor="let job of searchSuggestion">{{job}}</p>
+  </div>
+</div>

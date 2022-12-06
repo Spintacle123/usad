@@ -9,6 +9,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 })
 export class StarsComponent implements OnInit {
   faStar = faStar;
+  @Input() noOfStar = 5;
   @Input() fontSize = null;
   constructor() { }
 

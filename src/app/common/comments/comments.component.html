@@ -1,0 +1,32 @@
+<div class="w-full flex flex-col items-start start pt-[5em] text-gray-500 border-b-2 pb-10">
+  <div class="flex flex-col gap-3" *ngFor="let comment of comments">
+    <app-user-default-profile [hasStar]="false" [hasContact]="false" styling="pl-0 ml-0"></app-user-default-profile>
+    <div class="flex flex-col items-start text-sm gap-5 pl-[5em]">
+      <div class="flex gap-2">
+        <app-stars [noOfStar]="5"></app-stars>
+        <p class=" text-yellow-300 font-jakartaSansBold">{{comment.ratedStar}}</p>
+        <p class="px-5"> | </p>
+        <p>Published {{toAgo(comment.publishedDate)}}</p>
+      </div>
+      <div class="flex gap-2">
+        <p>{{comment.comment}}</p>
+      </div>
+      <div class="flex gap-4 py-3">
+        <p>Helpful?</p>
+        <div class="flex gap-2">
+          <p [class]="comment.isHelpfull ? 'text-blue-800' : 'text-gray-300'" class=" hover:text-blue-800 hover:rotate-12 cursor-pointer transition-all">
+          <fa-icon fa-icon [icon]="faThumbsUp"  size="lg"></fa-icon>
+          </p>
+          <p>Yes</p>
+        </div>
+        <div class="flex gap-2">
+          <p [class]="!comment.isHelpfull ? 'text-blue-800' : 'text-gray-300'" class=" hover:text-blue-800 hover:rotate-12 cursor-pointer transition-all">
+          <fa-icon fa-icon [icon]="faThumbsDown"  size="lg"></fa-icon>
+          </p>
+          <p>No</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

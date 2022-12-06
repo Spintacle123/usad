@@ -1,5 +1,5 @@
-<div class="w-full flex items-center justify-center gap-4">
-  <div class="mr-[-2em] z-20 mt-[-5em] cursor-pointer hover:opacity-70">
+<div *ngIf="type == 'gallery'" class="w-full flex items-center justify-center gap-4 z-10">
+  <div class="mr-[-2em] z-10 mt-[-5em] cursor-pointer hover:opacity-70">
     <div class="flex justify-center items-center text-gray-600 border-2 bg-white shadow-lg rounded-full h-[3.5em] w-[3.5em]"
     (click)="setActivePage('sub')"
     >
@@ -16,7 +16,7 @@
       <img *ngFor="let img of listOfImages" class="h-[6em] cursor-pointer hover:opacity-60" (click)="setActiveSlide(img)" [src]="img.imgUrl" [alt]="img.label">
     </div>
   </div>
-  <div class="ml-[-2em] z-20 mt-[-5em] cursor-pointer hover:opacity-60">
+  <div class="ml-[-2em] z-10 mt-[-5em] cursor-pointer hover:opacity-60">
     <div class="flex justify-center items-center text-gray-600 border-2 bg-white shadow-lg rounded-full h-[3.5em] w-[3.5em]"
     (click)="setActivePage('add')"
     >
@@ -25,4 +25,3 @@
       </p>
     </div>
   </div>
-</div>

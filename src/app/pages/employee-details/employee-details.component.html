@@ -1,12 +1,12 @@
-<div class="w-full xl:px-[18vw] lg:px-[6em] md:px-[5em]">
-  <app-navbar></app-navbar>
-  <div class="w-full flex flex-col items-center justify-start">
+<div class="w-full xl:px-[18vw] lg:px-[6em] md:px-[5em] border-b-2">
+  <!-- <app-navbar (navigate)="scroll($event)"></app-navbar> -->
+  <div id="overview" class="w-full flex flex-col items-center justify-start pt-[4em] z-10">
     <div class="w-[60 %]">
       <app-user-default-profile></app-user-default-profile>
       <app-carousel></app-carousel>
     </div>
   </div>
-  <div class="w-full flex flex-col items-start pt-[5em]">
+  <div id="description" class="w-full flex flex-col items-start pt-[5em]">
     <h1 class=" text-xl font-jakartaSansBold">About this Gig</h1>
     <p class=" text-md text-gray-600 mt-[1em]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus, ultricies iaculis vitae vestibulum, commodo, libero. Erat ac nibh ipsum purus sed vel. Massa sollicitudin tortor arcu condimentum luctus. Enim pharetra porta ipsum purus vestibulum feugiat. Nulla pulvinar duis tincidunt augue. Pulvinar mauris purus accumsan pulvinar lorem dictum ut pulvinar ipsum. Enim id bibendum nibh.</p>
   </div>
@@ -14,11 +14,16 @@
     <h1 class=" text-xl font-jakartaSansBold">Location</h1>
     <p class=" text-md text-gray-600 mt-[1em]">Cainta, Rizal, Philippines</p>
   </div>
-  <div class="w-full flex flex-col items-start pt-[2em]">
+  <div  id="about" class="w-full flex flex-col items-start pt-[2em]">
     <h1 class=" text-xl font-jakartaSansBold">About the Freelancer</h1>
     <app-user-default-profile imageSize="w-[5.5em] h-[5.5em]" styling="pl-0" [hasContact]="true"></app-user-default-profile>
-    <div class="w-full">
+    <div id="packages" class="w-full">
       <app-user-packages></app-user-packages>
     </div>
   </div>
+  <app-user-clients></app-user-clients>
+  <app-faqs></app-faqs>
+  <app-review-ratings></app-review-ratings>
+  <app-comments></app-comments>
+  <app-recommended></app-recommended>
 </div>

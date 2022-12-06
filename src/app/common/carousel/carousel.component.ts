@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faArrowLeft, faArrowRight  } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -9,6 +9,7 @@ import { faArrowLeft, faArrowRight  } from '@fortawesome/free-solid-svg-icons';
 export class CarouselComponent implements OnInit {
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;
+  @Input() type = 'gallery'
 
   listOfImages = [
     {

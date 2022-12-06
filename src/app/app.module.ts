@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -19,6 +20,12 @@ import { NavbarComponent } from './common/navbar/navbar.component';
 import { CarouselComponent } from './common/carousel/carousel.component';
 import { UserDefaultProfileComponent } from './common/user-default-profile/user-default-profile.component';
 import { UserPackagesComponent } from './common/user-packages/user-packages.component';
+import { UserClientsComponent } from './common/user-clients/user-clients.component';
+import { FaqsComponent } from './common/faqs/faqs.component';
+import { ReviewRatingsComponent } from './common/review-ratings/review-ratings.component';
+import { CommentsComponent } from './common/comments/comments.component';
+import { RecommendedComponent } from './common/recommended/recommended.component';
+import { SearchSuggestionComponent } from './common/search-suggestion/search-suggestion.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +44,19 @@ import { UserPackagesComponent } from './common/user-packages/user-packages.comp
     NavbarComponent,
     CarouselComponent,
     UserDefaultProfileComponent,
-    UserPackagesComponent
+    UserPackagesComponent,
+    UserClientsComponent,
+    FaqsComponent,
+    ReviewRatingsComponent,
+    CommentsComponent,
+    RecommendedComponent,
+    SearchSuggestionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+<div class="w-full flex flex-col items-start pt-[5em]">
+  <h1 class=" text-xl font-jakartaSansBold">Juan's Recent Clients</h1>
+  <div class="flex gap-6 pt-10">
+    <div class="flex gap-5 items-center" *ngFor="let client of clients">
+      <img [src]="client.imgUrl" class="w-[5em]" alt="">
+      <div class="flex flex-col justify-center">
+        <p class=" text-[0.9em] font-jakartaSansBold">{{client.title}}</p>
+        <span class=" text-[0.8em]">{{client.desc}}</span>
+        <p class="text-[0.7em] mt-[2px]">{{client.date}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

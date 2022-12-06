@@ -1,9 +1,9 @@
 <div class="profile-dp flex gap-3 py-5" [class]="styling">
   <img src="/assets/imgs/dp.jpg" class="rounded-full"  [class]="imageSize" alt="">
-  <div class="flex flex-col justify-center">
+  <div class="flex flex-col justify-center" *ngIf="!dpOnly">
     <p class=" font-jakartaSansSemiBold text-[0.8em] text-black">Kuan Dela Cruz</p>
     <p class=" text-gray-500 text-[0.7em] text-gray mt-[-5px]">kuandc@gmail.com</p>
-    <div class="flex gap-1 mt-[-2px] items-center">
+    <div class="flex gap-1 mt-[-2px] items-center" *ngIf="hasStar">
       <p class=" text-yellow-300">
         <fa-icon [icon]="faStar" size="xs"></fa-icon>
       </p>
