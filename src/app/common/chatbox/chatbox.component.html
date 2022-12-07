@@ -1,0 +1,7 @@
+<div class="flex flex-col gap-3">
+  <div class="w-full animate-fade-in" *ngFor="let message of messages" >
+    <app-receive *ngIf="!message.isYou" [hasDp]="true" [messageData]="message"></app-receive>
+    <app-send *ngIf="message.isYou" [messageData]="message"></app-send>
+  </div>
+  <app-deal *ngIf="makeDeal"></app-deal>
+</div>

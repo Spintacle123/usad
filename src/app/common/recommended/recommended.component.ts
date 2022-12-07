@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-recommended',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recommended.component.css']
 })
 export class RecommendedComponent implements OnInit {
+  @Input() title ="Recommended Gigs"
 
   constructor() { }
 

@@ -10,6 +10,10 @@ body{
   font-family: "JakarSansRegular";
 }
 
+.disabled-scroll{
+  overflow: hidden !important;
+}
+
 @font-face {
   font-family: "JakarSansRegular";
   src: url("../src/assets/fonts/PlusJakartaSans-Regular.ttf");

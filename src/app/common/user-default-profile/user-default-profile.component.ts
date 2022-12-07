@@ -15,6 +15,7 @@ export class UserDefaultProfileComponent implements OnInit {
   @Input() hasContact = false;
   @Input() hasStar = true;
   @Input() dpOnly= false;
+  @Input() imgUrl = "/assets/imgs/dp.jpg"
 
   constructor(
     public event: EventService

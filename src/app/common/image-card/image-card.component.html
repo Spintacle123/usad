@@ -1,11 +1,11 @@
-<div *ngIf="type === 'dark'" [class]="slide " class="flex text-white flex-col justify-end  w-full h-[25em] rounded-xl shadow-lg">
+<div   *ngIf="type === 'dark'" [class]="slide" class=" cursor-pointer hover:mt-[-2rem] transition-all flex text-white flex-col justify-end  w-full h-[25em] rounded-xl shadow-lg">
   <div class="backdrop-opacity-10 bg-black/40 rounded-bl-xl rounded-br-xl px-4 py-4">
     <p class="text-sm">{{desc}}</p>
     <h3 class="text-xl font-jakartaSansBold">{{title}}</h3>
   </div>
 </div>
 
-<div *ngIf="type === 'light'" class="flex text-white flex-col justify-start w-full h-[20em]  shadow-lg">
+<div  (click)="navigateTo(5)" *ngIf="type === 'light'" class=" cursor-pointer hover:mt-[-1rem] transition-all flex text-white flex-col justify-start w-full h-[20em]  shadow-lg">
   <div  [class]="slide" class="h-full"></div>
   <div class="backdrop-opacity-10 bg-white  text-black px-4 py-4">
     <h3 class="text-sm font-jakartaSansBold">{{title}}</h3>

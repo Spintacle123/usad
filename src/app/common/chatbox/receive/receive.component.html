@@ -1,0 +1,7 @@
+<div class="flex justify-start gap-3 w-full mb-1">
+  <img *ngIf="hasDp" [src]="messageData.imgUrl" class="rounded-full h-[2em] w-[2em]">
+  <img *ngIf="!hasDp" [src]="messageData.imgUrl" class="rounded-full h-[2em] w-[2em]" [style.visibility]="'hidden'">
+  <div class="w-[74%] bg-white p-4 rounded-xl">
+    <p class="text-[0.8em]">{{messageData.message}}</p>
+  </div>
+</div>

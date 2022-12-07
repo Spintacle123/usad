@@ -22,7 +22,7 @@ export class MainAdComponent implements OnInit {
   }
 
   goToGame(id: number) {
-    this.router.navigate([`/freelancer`], { queryParams: { userId: id } });
+    this.router.navigate([`/freelancer/profile`], { queryParams: { userId: id } });
   }
 
 }

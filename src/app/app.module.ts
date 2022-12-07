@@ -26,6 +26,14 @@ import { ReviewRatingsComponent } from './common/review-ratings/review-ratings.c
 import { CommentsComponent } from './common/comments/comments.component';
 import { RecommendedComponent } from './common/recommended/recommended.component';
 import { SearchSuggestionComponent } from './common/search-suggestion/search-suggestion.component';
+import { LoaderComponent } from './pages/loader/loader.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileBasicComponent } from './common/profile-basic/profile-basic.component';
+import { ModalComponent } from './common/modal/modal.component';
+import { ChatboxComponent } from './common/chatbox/chatbox.component';
+import { ReceiveComponent } from './common/chatbox/receive/receive.component';
+import { SendComponent } from './common/chatbox/send/send.component';
+import { DealComponent } from './common/chatbox/deal/deal.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +58,15 @@ import { SearchSuggestionComponent } from './common/search-suggestion/search-sug
     ReviewRatingsComponent,
     CommentsComponent,
     RecommendedComponent,
-    SearchSuggestionComponent
+    SearchSuggestionComponent,
+    LoaderComponent,
+    ProfileComponent,
+    ProfileBasicComponent,
+    ModalComponent,
+    ChatboxComponent,
+    ReceiveComponent,
+    SendComponent,
+    DealComponent
   ],
   imports: [
     BrowserModule,

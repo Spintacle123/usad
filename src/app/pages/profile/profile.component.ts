@@ -2,17 +2,48 @@ import { Component, OnInit } from '@angular/core';
 import { faStar, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import { Router, ActivatedRoute } from '@angular/router';
 import { EventService } from 'src/app/services/event.service';
+import { profiles } from 'src/app/services/common';
+
 
 @Component({
-  selector: 'app-employee-details',
-  templateUrl: './employee-details.component.html',
-  styleUrls: ['./employee-details.component.css']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
-export class EmployeeDetailsComponent implements OnInit {
+export class ProfileComponent implements OnInit {
   faStar = faStar;
   userId = "";
   pageLoading = true;
   faStarHalfStroke = faStarHalfStroke;
+  profiles = profiles;
+  activeProfile = {
+    imgUrl: 'assets/imgs/dp.jpg',
+    name: 'Kevin Santos Dy',
+    email: 'kevin@gmail.com',
+    rating: 3,
+    address: '40 Sgt. Esguera, Quezon City',
+    memberSince: 'Sept 2022',
+    reponseTime: 3,
+    language: [
+      {
+        dialect: 'English',
+        mastery: 'Professional Conversation'
+      },
+      {
+        dialect: 'Filipino',
+        mastery: 'Native/Bilingual'
+      }
+    ],
+    skills: [
+      "plumbing",
+      "carpenting",
+      "mechanical skill",
+      "log builder",
+      "problem solving",
+      "industrial",
+      "finish carpenter"
+    ]
+  }
 
   constructor(
     private router: Router,
@@ -28,6 +59,7 @@ export class EmployeeDetailsComponent implements OnInit {
     this.event.subscribe('searchAgain', () => {
       this.pageLoading = true;
       this.event.publish('isloading', true);
+      this.getProfile();
       this.setLoading(false);
    });
   }
@@ -48,6 +80,10 @@ export class EmployeeDetailsComponent implements OnInit {
     setTimeout(()=> {
         this.pageLoading = load;
         this.event.publish('isloading', load);
-      }, 5000);
+      }, 2000);
+  }
+
+  getProfile(){
+    this.activeProfile = profiles[ Math.floor(Math.random() * 5)];
   }
 }

@@ -1,0 +1,96 @@
+<div class="bg-white shadow-lg rounded-lg p-5 grid grid-cols-3 mt-[0.9em]">
+  <div class="flex flex-col gap-2 border-r-2 px-6">
+    <div class="w-full flex justify-between items-center">
+      <div class="flex gap-2">
+        <img src="/assets/imgs/svg/menu.svg" class="h-[0.8em]" alt="">
+        <img src="/assets/imgs/svg/Vector-2.svg" class="h-[0.8em]" alt="">
+      </div>
+      <div class="h-[2rem] rounded-full w-[6rem] border-2 border-yellow-400 flex gap-3 justify-center items-center">
+        <div class="h-[10px] w-[10px] rounded-full bg-yellow-400"></div>
+        <p class=" text-sm text-yellow-400 ">Online</p>
+      </div>
+    </div>
+    <div class="w-full text-sm flex flex-col justify-between items-center">
+      <app-user-default-profile styling="pl-0" [imgUrl]="profile.imgUrl" [dpOnly]="true" imageSize="w-[10rem] h-[10rem]"></app-user-default-profile>
+      <p class="text-md font-jakartaSansBold">{{profile.name}}</p>
+      <p class=" text-[0.9em]">{{profile.email}}</p>
+      <div class="flex gap-2">
+        <app-stars [noOfStar]="profile.rating"></app-stars>
+        <p class=" text-[0.9em] font-jakartaSansBold">{{profile.rating}}</p>
+        <span class=" text-[0.9em] text-gray-400">(123 reviews)</span>
+      </div>
+    </div>
+    <div class="w-full text-sm flex justify-center gap-2 items-center mt-[2em]">
+      <button (click)="setModal(true)" type="button" class="text-white bg-dark-blue hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2">
+        Contact Me
+      </button>
+      <button type="button" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2">
+        Get a Quote
+      </button>
+    </div>
+  </div>
+  <div class="flex flex-col gap-2 border-r-2 px-6">
+    <div class="w-full basic-details flex justify-between text-sm">
+      <div class="flex gap-1">
+        <fa-icon [icon]="faLocation" size="xs"></fa-icon>
+        From
+      </div>
+      <p class=" font-jakartaSansBold text-black">{{profile.address}}</p>
+    </div>
+    <div class="w-full basic-details flex justify-between text-sm">
+      <div class="flex gap-1">
+        <fa-icon [icon]="faUser" size="xs"></fa-icon>
+        Member Since.
+      </div>
+      <p class=" font-jakartaSansBold text-black">{{profile.memberSince}}</p>
+    </div>
+    <div class="w-full basic-details flex justify-between text-sm">
+      <div class="flex gap-1">
+        <fa-icon [icon]="faClock" size="xs"></fa-icon>
+        Ave. Response Time
+      </div>
+      <p class=" font-jakartaSansBold text-black">{{profile.reponseTime}} hours</p>
+    </div>
+    <div class="w-full basic-details flex justify-between text-sm  pb-3">
+      <div class="flex gap-1">
+        <fa-icon [icon]="faArrowRightToCity" size="xs"></fa-icon>
+        Last Service
+      </div>
+      <p class=" font-jakartaSansBold text-black">5 days ago</p>
+    </div>
+    <div class="w-full text-sm">
+      <p class="py-6 pb-3 font-jakartaSansBold">Description</p>
+      <p>I'm Juan dela Cruz, a Freelance Carpenter and with years of experience. I am willing to give you the best service I can here on Gawa PH. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+  <div class="flex flex-col gap-2 px-6">
+    <div class="w-full text-sm">
+      <p class="pb-3 font-jakartaSansBold">Language</p>
+      <p *ngFor="let lang of profile.language">{{lang.dialect}} - <span class="text-gray-400">{{lang.mastery}}</span></p>
+    </div>
+    <div class="w-full text-sm mt-[2em]">
+      <p class="pb-3 font-jakartaSansBold">Skills</p>
+      <div class="w-full flex gap-2 flex-wrap">
+        <p class="w-max flex justify-center items-center text-sm text-gray-400 py-1 px-3 border-2 rounded-full" *ngFor="let skill of profile.skills">{{skill}}</p>
+      </div>
+    </div>
+    <div class="w-full text-sm mt-[2em]">
+      <p class="pb-3 font-jakartaSansBold">Linked Accounts</p>
+      <div class="w-full flex gap-5 flex-wrap">
+        <a class="hover:opacity-60 cursor-pointer">
+          <img src="/assets/imgs/svg/facebook.svg" class="h-[1.3em]" alt="">
+        </a>
+        <a class="hover:opacity-60 cursor-pointer">
+          <img src="/assets/imgs/svg/twitter.svg" class="h-[1.3em]" alt="">
+        </a>
+        <a class="hover:opacity-60 cursor-pointer">
+          <img src="/assets/imgs/svg/linkedin.svg" class="h-[1.3em]" alt="">
+        </a>
+        <a class="hover:opacity-60 cursor-pointer">
+          <img src="/assets/imgs/svg/youtube.svg" class="h-[1.3em]" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>

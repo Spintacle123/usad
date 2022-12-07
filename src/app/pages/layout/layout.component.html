@@ -2,4 +2,5 @@
 <div class="w-full pt-[6.4em]">
   <router-outlet></router-outlet>
 </div>
+<app-modal *ngIf="isModal" [type]="type" (close)="setModal($event)"></app-modal>
 <app-footer></app-footer>

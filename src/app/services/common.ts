@@ -49,3 +49,141 @@ export const jobList = [
     "IT Manager",
     "Financial Analysts"
 ]
+
+
+export const profiles = [
+  {
+    imgUrl: '/assets/imgs/dp.jpg',
+    name: 'Kevin Santos Dy',
+    email: 'kevin@gmail.com',
+    rating: 3,
+    address: '40 Sgt. Esguera, Quezon City',
+    memberSince: 'Sept 2022',
+    reponseTime: 3,
+    language: [
+      {
+        dialect: 'English',
+        mastery: 'Professional Conversation'
+      },
+      {
+        dialect: 'Filipino',
+        mastery: 'Native/Bilingual'
+      }
+    ],
+    skills: [
+      "plumbing",
+      "carpenting",
+      "mechanical skill",
+      "log builder",
+      "problem solving",
+      "industrial",
+      "finish carpenter"
+    ]
+  },
+  {
+    imgUrl: '/assets/imgs/dp3.jpg',
+    name: 'Allamid Para Cetamol',
+    email: 'allamid@gmail.com',
+    rating: 5,
+    address: '102 Tomas Morato, Quezon City',
+    memberSince: 'Sept 2020',
+    reponseTime: 1,
+    language: [
+      {
+        dialect: 'English',
+        mastery: 'Professional Conversation'
+      }
+    ],
+    skills: [
+      "programming",
+      "cumputer repair",
+      "mechanical skill",
+      "log builder",
+    ]
+  },
+  {
+    imgUrl: '/assets/imgs/dp4.jpg',
+    name: 'Gregory John Salbuet Tamol',
+    email: 'gregory@gmail.com',
+    rating: 3,
+    address: 'Anonas Cubao, Quezon City',
+    memberSince: 'Sept 2022',
+    reponseTime: 4,
+    language: [
+      {
+        dialect: 'English',
+        mastery: 'Professional Conversation'
+      },
+      {
+        dialect: 'Filipino',
+        mastery: 'Native/Bilingual'
+      },
+      {
+        dialect: 'Visaya',
+        mastery: 'Native/Bilingual'
+      },
+      {
+        dialect: 'Bicolnon',
+        mastery: 'Native/Bilingual'
+      }
+    ],
+    skills: [
+      "plumbing",
+      "carpenting",
+      "mechanical skill",
+      "log builder",
+    ]
+  },
+  {
+    imgUrl: '/assets/imgs/dp2.jpg',
+    name: 'Janette Lee Napol Lesh',
+    email: 'janette@gmail.com',
+    rating: 2,
+    address: '40 Sgt. Esguera, Quezon City',
+    memberSince: 'Sept 2019',
+    reponseTime: 2,
+    language: [
+      {
+        dialect: 'English',
+        mastery: 'Professional Conversation'
+      },
+      {
+        dialect: 'Filipino',
+        mastery: 'Native/Bilingual'
+      }
+    ],
+    skills: [
+      "sketching",
+      "sewing",
+      "cooking",
+      "accountant",
+      "problem solving",
+    ]
+  },
+  {
+    imgUrl: '/assets/imgs/dp5.jpg',
+    name: 'Maria Bernadette Santos',
+    email: 'maria@gmail.com',
+    rating: 5,
+    address: '39 Sgt. Esguera, Quezon City',
+    memberSince: 'Sept 2022',
+    reponseTime: 1,
+    language: [
+      {
+        dialect: 'English',
+        mastery: 'Professional Conversation'
+      },
+      {
+        dialect: 'Filipino',
+        mastery: 'Native/Bilingual'
+      }
+    ],
+    skills: [
+      "accountant",
+      "programmer",
+      "baby sitter",
+      "chef",
+      "sewing",
+    ]
+  }
+]

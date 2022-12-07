@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   faShuffle = faShuffle;
   currentRouter = "";
   inFocus = false;
+  isLoading = false;
   searchBox = "";
 
   constructor(
@@ -30,6 +31,9 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.event.subscribe('isloading', (loading) => {
+        this.isLoading = loading;
+     });
   }
 
   getRoute() {
@@ -47,5 +51,9 @@ export class HeaderComponent implements OnInit {
 
   onKeyUp(event: any){
     this.event.publish('searching', this.searchBox);
+  }
+
+  onNext(event: any){
+    this.event.publish('searchAgain');
   }
 }
