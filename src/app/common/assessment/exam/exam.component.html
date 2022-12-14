@@ -1,0 +1,55 @@
+<div *ngIf="type === 'practice'" class="w-full bg-dark-blue py-3 flex justify-center items-center text-white">
+  <p class="text-lg">Practice Mode</p>
+</div>
+<div *ngIf="!result" class="w-full py-10 xl:px-[18vw] lg:px-[6em] md:px-[5em] border-b-2">
+  <p class="text-lg font-jakartaSansBold text-center pb-7">Carpenting Assessment</p>
+  <div class=" col-span-3 w-full border rounded-lg text-sm">
+    <div class="w-full flex flex-col gap-3 py-7 px-9 border-b bg-gray-100">
+      <p class=" font-jakartaSansBold"> {{questions[activeQuestion].question}}</p>
+    </div>
+    <div class="w-full items-center flex gap-3 py-7 px-9 border-b" *ngFor="let q of questions[activeQuestion].options">
+      <input
+        [checked]="choosenAnswer == q.letter"
+        [disabled]="timer <= 0"
+        [class]="timer <= 0 ? 'cursor-not-allowed' : 'cursor-pointer'"
+        id="checked-checkbox"
+        type="checkbox"
+        (click)="choosenAnswer = q.letter"
+        [value]="q.letter"
+        class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+      <span>{{q.answer}}</span>
+    </div>
+    <div class="w-full flex flex-col gap-3 py-7 pb-4 px-9 bg-gray-100">
+      <p> Something wrong with this question? <span class=" font-jakartaSansBold">Give Feedback.</span> </p>
+      <div class="relative flex justify-start rounded-full h-[10px] w-full bg-gray-400">
+        <div class="h-[10px] bg-dark-blue rounded-full transition-all" [ngStyle]="{'width': computePertentage(activeQuestion+1, questions.length)}"></div>
+      </div>
+    </div>
+    <div class="w-full flex justify-between gap-3 py-7 pt-0 px-9 border-b bg-gray-100">
+      <div class="flex justify-start gap-3">
+        <span class=" font-jakartaSansBold">Q{{activeQuestion+1}}/{{questions.length}} </span>
+        <p> Time reamining </p>
+        <span class=" font-jakartaSansBold">{{timeRemaining}}</span>
+      </div>
+      <button
+        *ngIf="activeQuestion+1 < questions.length"
+        (click)="nextQuestion()"
+        type="button"
+        class="text-white bg-dark-blue hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Next Question
+      </button>
+      <button
+        *ngIf="activeQuestion+1 >= questions.length"
+        (click)="submitAnswers()"
+        type="button"
+        class="text-white bg-dark-blue hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+<app-result *ngIf="result" [result]="result"></app-result>
+
+<!-- <p *ngIf="type === 'practice'">Practice Mode</p>
+<p *ngIf="type === 'exam'">Exam Mode</p>
+ -->

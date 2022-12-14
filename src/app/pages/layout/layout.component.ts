@@ -16,11 +16,11 @@ export class LayoutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.setScroll()
+    this.setScroll(false)
     this.event.subscribe('openModal', (openModal) => {
       this.isModal = openModal.isModal;
       this.type = openModal.type;
-      this.setScroll()
+      this.setScroll(openModal.isModal)
    });
   }
 
@@ -29,8 +29,8 @@ export class LayoutComponent implements OnInit {
     this.isModal = event;
   }
 
-  setScroll(){
-    if(this.isModal){
+  setScroll(bol:boolean){
+    if(bol){
       this.scroll.disable();
     }else{
       this.scroll.enable();

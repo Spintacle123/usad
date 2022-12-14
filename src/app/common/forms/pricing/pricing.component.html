@@ -1,0 +1,116 @@
+<div class="flex py-7 gap-6 flex-col">
+  <h3 class=" font-jakartaSansBold">Pricing</h3>
+  <div class="w-full flex flex-col text-[0.8em]">
+    <p class="mb-5">Packages</p>
+    <div class="grid grid-cols-5 border-t border-l">
+      <div class="col-span-2 items-end justify-start row-span-3 p-5" [class]="cellDesign">
+        <p>Revision</p>
+      </div>
+
+      <!-- Headers -->
+      <div class="flex flex-col bg-gray-100" [class]="cellDesign">
+        <p class=" font-jakartaSansBold uppercase">Basic</p>
+        <span>(Required)</span>
+      </div>
+      <div class="flex flex-col bg-gray-100" [class]="cellDesign">
+        <p class=" font-jakartaSansBold uppercase">Standard</p>
+        <span>(Required)</span>
+      </div>
+      <div class="flex flex-col bg-gray-100" [class]="cellDesign">
+        <p class=" font-jakartaSansBold uppercase">Premium</p>
+        <span>(Required)</span>
+      </div>
+
+      <!-- Titles -->
+      <div class="flex flex-col" [class]="cellDesign">
+        <textarea type="text" rows="2"  class=" focus:ring-0 border-none text-[0.9em] mt-[-10px] pl-0" placeholder="Title"></textarea>
+      </div>
+      <div class="flex flex-col" [class]="cellDesign">
+        <textarea type="text" rows="2"  class=" focus:ring-0 border-none text-[0.9em] mt-[-10px] pl-0" placeholder="Title"></textarea>
+      </div>
+      <div class="flex flex-col" [class]="cellDesign">
+        <textarea type="text" rows="2"  class=" focus:ring-0 border-none text-[0.9em] mt-[-10px] pl-0" placeholder="Title"></textarea>
+      </div>
+
+      <!-- Description -->
+      <div class="flex flex-col" [class]="cellDesign">
+        <textarea type="text" rows="4"  class=" focus:ring-0 border-none text-[0.9em] mt-[-10px] pl-0" placeholder="Description"></textarea>
+      </div>
+      <div class="flex flex-col" [class]="cellDesign">
+        <textarea type="text" rows="4"  class=" focus:ring-0 border-none text-[0.9em] mt-[-10px] pl-0" placeholder="Description"></textarea>
+      </div>
+      <div class="flex flex-col" [class]="cellDesign">
+        <textarea type="text" rows="4"  class=" focus:ring-0 border-none text-[0.9em] mt-[-10px] pl-0" placeholder="Description"></textarea>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="grid grid-cols-5 border-t border-l" *ngFor="let service of services">
+      <div class="col-span-2 flex flex-col" [class]="cellDesign">
+        <input type="text" [value]="service.label" id="voice-search" class=" text-gray-500 border-0 text-sm focus:ring-0 focus:border-none block w-full pl-0 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-0 dark:focus:border-none" placeholder="Enter Name of Service" required>
+      </div>
+      <div class="flex flex-col items-center" [class]="cellDesign">
+        <input [checked]="service.basic" id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+      </div>
+      <div class="flex flex-col items-center" [class]="cellDesign">
+        <input [checked]="service.standard" id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+      </div>
+      <div class="flex flex-col items-center" [class]="cellDesign">
+        <input [checked]="service.premium" id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+      </div>
+    </div>
+    <div class="grid grid-cols-1 border-t border-l">
+      <div class="flex justify-start gap-4 items-center text-blue-500 cursor-pointer hover:opacity-60" [class]="cellDesign">
+        <p>
+          <fa-icon fa-icon [icon]="faPlus"  size="lg"></fa-icon>
+        </p>
+        <p class="font-jakartaSansBold" (click)="newService()">Add New Service</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-5 border-t border-l">
+      <!-- Price -->
+      <div class="col-span-2 flex flex-col" [class]="cellDesign">
+        <p>Price</p>
+      </div>
+      <div class="flex flex-col items-center" [class]="cellDesign">
+        <div class="relative w-full">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <p>₱</p>
+          </div>
+          <input type="number" id="voice-search" class=" text-gray-500 border-0 text-sm focus:ring-0 focus:border-none block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-0 dark:focus:border-none" placeholder="0.00" required>
+        </div>
+      </div>
+      <div class="flex flex-col items-center" [class]="cellDesign">
+        <div class="relative w-full">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <p>₱</p>
+          </div>
+          <input type="number" id="voice-search" class=" text-gray-500 border-0 text-sm focus:ring-0 focus:border-none block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-0 dark:focus:border-none" placeholder="0.00" required>
+        </div>
+      </div>
+      <div class="flex flex-col items-center" [class]="cellDesign">
+        <div class="relative w-full">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <p>₱</p>
+          </div>
+          <input type="number" id="voice-search" class=" text-gray-500 border-0 text-sm focus:ring-0 focus:border-none block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-0 dark:focus:border-none" placeholder="0.00" required>
+        </div>
+      </div>
+    </div>
+
+    <h3 class=" font-jakartaSansBold mb-3 mt-5 text-lg">Extra Service</h3>
+    <div class="grid grid-cols-1 border-t border-l border-r">
+      <div *ngFor="let exservice of extraServices" class="flex w-full items-center justify-start gap-6" [class]="cellDesign">
+        <input [checked]="exservice.isActive" id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <input type="text" [value]="exservice.label" id="voice-search" class=" text-gray-500 border-0 text-sm focus:ring-0 focus:border-none block w-full pl-0 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-0 dark:focus:border-none" placeholder="Enter Name of Service" required>
+      </div>
+      <div class="flex w-full items-center justify-start gap-6 cursor-pointer text-blue-600 hover:opacity-60" [class]="cellDesign">
+        <p>
+         <fa-icon fa-icon [icon]="faPlus"  size="lg"></fa-icon>
+        </p>
+        <p class="font-jakartaSansBold" (click)="newExtraService()">Add New Extra Service</p>
+      </div>
+    </div>
+  </div>
+ </div>

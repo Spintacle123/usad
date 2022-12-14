@@ -1,4 +1,4 @@
-<div class="absolute z-40 top-0 left-0 w-screen h-screen bg-black/50 flex" [class]="type === 'modal' ? 'justify-center items-center' : 'justify-end items-start'">
+<div class="fixed z-40 top-0 left-0 w-screen h-screen bg-black/50 flex" [class]="type === 'modal' ? 'justify-center items-center' : 'justify-end items-start'">
   <div *ngIf="type === 'modal'" class=" bg-white rounded-xl flex flex-col h-max w-[700px] animate-fade-in-up">
     <div class="flex gap-3 items-center p-[2em] border-b-2">
       <app-user-default-profile [dpOnly]="true" styling="pl-0 py-0" imageSize="h-[5em] w-[5em]"></app-user-default-profile>
@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <div *ngIf="type === 'side-modal'" class=" bg-white  flex flex-col justify-between h-screen w-[500px] animate-to-left">
+  <div *ngIf="type === 'message'" class=" bg-white  flex flex-col justify-between h-screen w-[500px] animate-to-left">
     <div class="w-full flex justify-between pr-7">
       <div class="flex gap-3 items-center p-[2em] pt-0 pb-0">
         <app-user-default-profile [dpOnly]="true" styling="pl-0 py-0 my-0" imageSize="h-[5em] w-[5em]"></app-user-default-profile>
@@ -81,6 +81,80 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div *ngIf="type === 'inbox'" class=" bg-white  flex flex-col h-screen w-[500px] animate-to-left">
+    <div class="w-full flex justify-between items-center">
+      <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+          <ul class="flex flex-wrap -mb-px">
+              <li class="mr-2">
+                  <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Inbox</a>
+              </li>
+              <li class="mr-2">
+                  <a href="#" class="inline-block p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500" aria-current="page">Quotation Request</a>
+              </li>
+              <li class="mr-2">
+                <a href="#"class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Notifications</a>
+            </li>
+          </ul>
+      </div>
+      <fa-icon [icon]="faClose" (click)="closeModal(false)" class=" mr-5 cursor-pointer hover:opacity-70" size="xl"></fa-icon>
+    </div>
+    <div class="w-full flex flex-col justify-between pr-2">
+      <div class="relative w-full px-3 py-4 text-sm">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-7 pointer-events-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+        </div>
+        <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
+      </div>
+      <div class="w-full flex justify-between items-center cursor-pointer border-b-[1px] hover:bg-gray-100">
+        <div class="flex gap-3 items-center p-[2em] pl-[1em] pt-0 pb-0">
+          <app-user-default-profile [dpOnly]="true" styling="pl-0 pt-2 pb-2 my-0" imageSize="h-[3em] w-[3em]"></app-user-default-profile>
+          <div class="text-sm flex flex-col gap-2 truncate">
+            <p class="text-[0.9em] font-jakartaSansBold">Juan Dela Cruz</p>
+            <p class=" text-[0.8em] text-gray-400 mt-[-0.8em] text-ellipsis"> I am willing to give I can here on Gawa PH. </p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-center justify-end p-[2em] pl-[1em] pt-0 pb-0">
+          <div class="text-sm flex flex-col items-end gap-2">
+            <p class="text-[0.6em] font-jakartaSansBold">11:00 AM</p>
+            <p class="text-[0.8em] flex justify-center font-jakartaSansBold items-center text-white mt-[-0.8em] px-2 bg-yellow-500 h-[20px] w-max rounded-md">2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-between items-center cursor-pointer border-b-[1px] hover:bg-gray-100">
+        <div class="flex gap-3 items-center p-[2em] pl-[1em] pt-0 pb-0">
+          <app-user-default-profile [dpOnly]="true" styling="pl-0 pt-2 pb-2 my-0" imageSize="h-[3em] w-[3em]"></app-user-default-profile>
+          <div class="text-sm flex flex-col gap-2 truncate">
+            <p class="text-[0.9em] font-jakartaSansBold">Juan Dela Cruz</p>
+            <p class=" text-[0.8em] text-gray-400 mt-[-0.8em] text-ellipsis"> I am willing to give I can here on Gawa PH. </p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-center justify-end p-[2em] pl-[1em] pt-0 pb-0">
+          <div class="text-sm flex flex-col items-end gap-2">
+            <p class="text-[0.6em] font-jakartaSansBold">11:00 AM</p>
+            <p class="text-[0.8em] flex justify-center font-jakartaSansBold items-center text-white mt-[-0.8em] bg-yellow-500 h-[20px] px-2 w-max rounded-md">10</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-between items-center cursor-pointer border-b-[1px] hover:bg-gray-100">
+        <div class="flex gap-3 items-center p-[2em] pl-[1em] pt-0 pb-0">
+          <app-user-default-profile [dpOnly]="true" styling="pl-0 pt-2 pb-2 my-0" imageSize="h-[3em] w-[3em]"></app-user-default-profile>
+          <div class="text-sm flex flex-col gap-2 truncate">
+            <p class="text-[0.9em] font-jakartaSansBold">Juan Dela Cruz</p>
+            <p class=" text-[0.8em] text-gray-400 mt-[-0.8em] text-ellipsis"> I am willing to give I can here on Gawa PH. </p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-center justify-end p-[2em] pl-[1em] pt-0 pb-0">
+          <div class="text-sm flex flex-col items-end gap-2">
+            <p class="text-[0.6em] font-jakartaSansBold">11:00 AM</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

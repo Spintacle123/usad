@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-recommended',
@@ -7,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RecommendedComponent implements OnInit {
   @Input() title ="Recommended Gigs"
+  @Input() self = false
+  faPlus = faPlus
 
   constructor() { }
 

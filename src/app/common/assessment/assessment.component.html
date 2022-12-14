@@ -1,0 +1,56 @@
+<div *ngIf="!isExam" class="w-full py-10 xl:px-[18vw] lg:px-[6em] md:px-[5em] border-b-2">
+    <div class="grid grid-cols-4 gap-4">
+      <div *ngIf="showDetails"  class=" col-span-3 w-full border rounded-lg text-sm">
+        <div class="w-full flex flex-col gap-3 py-7 px-9 border-b">
+          <p class=" font-jakartaSansBold">Skill Assessments</p>
+          <span>Check your skill level. Answer 15 multiple choice questions, score in <br> the top 30%, and earn a skill badge. Learn more</span>
+        </div>
+        <div class="w-full justify-between items-center flex gap-4 py-5 px-9">
+          <div class="w-full flex flex-wrap gap-4">
+            <div *ngFor="let menu of menus">
+              <p class="cursor-pointer px-3 py-1 flex justify-center items-center rounded-full border">{{menu.label}}</p>
+            </div>
+          </div>
+          <div class="relative w-[40%]">
+              <input type="text" id="voice-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required>
+              <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+              </button>
+          </div>
+        </div>
+        <div *ngFor="let skill of skills" class="w-full justify-between items-center flex gap-4 py-5 px-9 border-b">
+          <div class="flex justify-start items-center gap-4 ">
+            <img src="/assets/imgs/man-welding.png" class="h-[4em] w-[4em]" alt="">
+            <div class="flex flex-col">
+              <p class=" font-jakartaSansBold">{{skill.title}}</p>
+              <span class="text-[0.8em] text-gray-500">{{skill.desc}}</span>
+            </div>
+          </div>
+          <a href="http://" class=" text-gray-400 text-[0.9em] underline hover:text-blue-500" (click)="showDetails = false">Take a test</a>
+        </div>
+      </div>
+      <div *ngIf="!showDetails"  class="col-span-3 w-full border rounded-lg text-sm">
+        <app-assessment-details></app-assessment-details>
+      </div>
+      <div class="relative flex flex-col gap-4 border h-max rounded-lg py-7 px-7 ">
+        <p class=" font-jakartaSansBold text-sm">Your Assessments</p>
+        <div class="flex justify-start gap-3">
+          <div class="flex flex-col justify-center items-center gap-2">
+            <img src="/assets/imgs/svg/badge-black.svg" class="h-[1.5em]" alt="">
+            <span class="text-[0.8em]">Badges</span>
+            <p class="text-lg font-jakartaSansBold text-blue-700 ">3</p>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-2">
+            <img src="/assets/imgs/svg/retake.svg" class="h-[1.5em]" alt="">
+            <span class="text-[0.8em]">To retake</span>
+            <p class="text-lg font-jakartaSansBold text-blue-700 ">5</p>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <img src="/assets/imgs/bg-assest.png" class="h-[12em] w-max" alt="">
+        </div>
+      </div>
+    </div>
+</div>
+<app-exam *ngIf="isExam" [type]="type"></app-exam>
+

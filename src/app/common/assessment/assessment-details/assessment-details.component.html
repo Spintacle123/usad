@@ -1,0 +1,49 @@
+
+  <div class="w-full flex flex-col gap-3 py-7 px-9 border-b">
+    <p class="font-jakartaSansBold text-lg">Carpenting</p>
+    <span>Topics: The top 30%, and earn a skill badge. Learn more</span>
+    <span>1k People took this.</span>
+  </div>
+  <div class="w-full items-start justify-center flex flex-col gap-4 py-5 px-9 border-b">
+    <div class="flex gap-3 items-center">
+      <img src="/assets/imgs/svg/checker.svg" class="h-[1.5em] w-max" alt="">
+      <span>20 multiple choice question</span>
+    </div>
+    <div class="flex gap-3 items-center">
+      <img src="/assets/imgs/svg/clock.svg" class="h-[1.5em] w-max" alt="">
+      <span>2 minutes per question</span>
+    </div>
+    <div class="flex gap-3 items-center">
+      <img src="/assets/imgs/svg/list.svg" class="h-[1.5em] w-max" alt="">
+      <span>Score in the top 50% to earn a badge</span>
+    </div>
+  </div>
+  <div class="w-full items-start justify-center flex flex-col gap-4 py-5 px-9 border-b">
+    <p class=" font-jakartaSansBold">Before you start</p>
+    <ul class="pl-5 mt-0 space-y-1 list-disc list-inside">
+      <li>You must complete this assessment in one session — make sure your internet is reliable.</li>
+      <li>You can retake this assessment once if you don’t earn a badge.</li>
+      <li>We won’t show your results to anyone without your permission.</li>
+   </ul>
+  </div>
+  <div class="w-full items-center justify-end flex gap-4 py-5 px-9">
+    <button
+      (click)="navigateTo('practice')"
+      type="button"
+      class="py-2.5 px-10 mr-2 mb-2 text-sm font-medium
+       text-gray-900 focus:outline-none bg-white rounded-lg
+        border border-gray-200 hover:bg-gray-100
+        hover:text-blue-700 focus:z-10 focus:ring-4
+        focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800
+        dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
+        dark:hover:bg-gray-700">Practice</button>
+    <button
+      (click)="navigateTo('exam')"
+      type="button"
+      class="text-white flex bg-dark-blue hover:bg-blue-800
+      focus:ring-4 focus:ring-blue-300 font-medium rounded-lg
+      text-sm px-10 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700
+      focus:outline-none dark:focus:ring-blue-800">
+      Start &nbsp;&nbsp; &#8594;
+    </button>
+  </div>

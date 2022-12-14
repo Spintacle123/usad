@@ -1,0 +1,12 @@
+<div *ngIf="validateRoute()"  class="w-full xl:px-[18vw] lg:px-[6em] md:px-[5em] border-b-2">
+  <!-- <app-navbar (navigate)="scroll($event)"></app-navbar> -->
+  <div id="basic-info" class="w-full flex flex-col items-center justify-start pt-[1em] z-10">
+     <app-profile-basic [profile]="activeProfile"></app-profile-basic>
+  </div>
+  <app-recommended [self]="true" title="Kuan Delos Santos Gigs"></app-recommended>
+  <app-skill-assessment></app-skill-assessment>
+  <app-review-ratings></app-review-ratings>
+  <app-comments></app-comments>
+</div>
+<router-outlet *ngIf="!validateRoute()"></router-outlet>
+

@@ -23,7 +23,7 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal(bol: boolean) {
-    this.close.emit(bol);
+    this.event.publish('openModal', {isModal:bol,type:'side-modal'})
   }
 
   makeDeal(){
@@ -45,5 +45,4 @@ export class ModalComponent implements OnInit {
       this.message = "";
     }
   }
-
 }

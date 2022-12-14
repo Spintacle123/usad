@@ -34,6 +34,17 @@ import { ChatboxComponent } from './common/chatbox/chatbox.component';
 import { ReceiveComponent } from './common/chatbox/receive/receive.component';
 import { SendComponent } from './common/chatbox/send/send.component';
 import { DealComponent } from './common/chatbox/deal/deal.component';
+import { UserComponent } from './pages/user/user.component';
+import { SkillAssessmentComponent } from './common/skill-assessment/skill-assessment.component';
+import { NewGigComponent } from './common/new-gig/new-gig.component';
+import { BreadCrumbsComponent } from './common/bread-crumbs/bread-crumbs.component';
+import { OverviewComponent } from './common/forms/overview/overview.component';
+import { PricingComponent } from './common/forms/pricing/pricing.component';
+import { NewFaqsComponent } from './common/forms/new-faqs/new-faqs.component';
+import { AssessmentComponent } from './common/assessment/assessment.component';
+import { AssessmentDetailsComponent } from './common/assessment/assessment-details/assessment-details.component';
+import { ExamComponent } from './common/assessment/exam/exam.component';
+import { ResultComponent } from './common/assessment/result/result.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +77,18 @@ import { DealComponent } from './common/chatbox/deal/deal.component';
     ChatboxComponent,
     ReceiveComponent,
     SendComponent,
-    DealComponent
+    DealComponent,
+    UserComponent,
+    SkillAssessmentComponent,
+    NewGigComponent,
+    BreadCrumbsComponent,
+    OverviewComponent,
+    PricingComponent,
+    NewFaqsComponent,
+    AssessmentComponent,
+    AssessmentDetailsComponent,
+    ExamComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

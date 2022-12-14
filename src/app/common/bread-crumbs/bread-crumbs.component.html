@@ -1,0 +1,14 @@
+<div class="w-full justify-between items-center flex gap-2 p-3">
+  <div class="justify-center items-center flex gap-2 p-3">
+    <div class="flex gap-2 items-center " *ngFor="let no of letBreads">
+      <div class="flex flex-col hover:opacity-70" [class]="!no.isActive ? 'opacity-50' : ''" (click)="setActiveTab(no)">
+        <div class="flex gap-2 items-center">
+          <div class="h-[2em] w-[2em] bg-dark-blue rounded-full flex justify-center items-center text-white cursor-pointer">{{no.id}}</div>
+          <div class="h-[3px] w-[3em] bg-gray-400 rounded-full" *ngIf="no.id < 3"></div>
+        </div>
+        <p class=" text-[0.8em] mt-2 ml-[-7px]">{{no.label}}</p>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="text-white ml-[7em] bg-dark-blue hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-[4em] py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
+</div>

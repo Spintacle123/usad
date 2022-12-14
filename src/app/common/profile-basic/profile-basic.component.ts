@@ -52,7 +52,6 @@ export class ProfileBasicComponent implements OnInit {
   }
 
   setModal(bol: boolean){
-    this.event.publish('openModal', {isModal:bol,type:'side-modal'})
+    this.event.publish('openModal', {isModal:bol,type:'message'})
   }
-
 }

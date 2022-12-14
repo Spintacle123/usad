@@ -56,4 +56,8 @@ export class HeaderComponent implements OnInit {
   onNext(event: any){
     this.event.publish('searchAgain');
   }
+
+  setModal(bol: boolean){
+    this.event.publish('openModal', {isModal:true,type:'inbox'})
+  }
 }

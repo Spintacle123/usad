@@ -1,0 +1,31 @@
+<div class="w-full border-b">
+  <div class="w-full xl:px-[18vw] lg:px-[6em] md:px-[5em] border-b">
+    <app-bread-crumbs></app-bread-crumbs>
+  </div>
+</div>
+<div class="w-full xl:px-[18vw] lg:px-[6em] md:px-[5em]">
+   <app-overview *ngIf="activeTab == 1"></app-overview>
+   <app-pricing *ngIf="activeTab == 2"></app-pricing>
+   <app-new-faqs *ngIf="activeTab == 3"></app-new-faqs>
+</div>
+<div class="w-full border-b pb-[2em]">
+  <div class="w-full flex justify-between xl:px-[18vw] lg:px-[6em] md:px-[5em]">
+    <button
+      type="button"
+      class="py-2.5 px-10 mr-2 mb-2 text-sm font-medium
+       text-gray-900 focus:outline-none bg-white rounded-lg
+        border border-gray-200 hover:bg-gray-100
+        hover:text-blue-700 focus:z-10 focus:ring-4
+        focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800
+        dark:text-gray-400 dark:border-gray-600 dark:hover:text-white
+        dark:hover:bg-gray-700">Cancel</button>
+    <button
+      type="button"
+      class="text-white bg-dark-blue hover:bg-blue-800
+      focus:ring-4 focus:ring-blue-300 font-medium rounded-lg
+      text-sm px-10 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700
+      focus:outline-none dark:focus:ring-blue-800">
+      Save & Next &nbsp;&nbsp; &#8594;
+    </button>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+<div class="flex py-7 gap-6 flex-col">
+  <h3 class=" font-jakartaSansBold">Showcase Your Services In A Gig Gallery</h3>
+  <div class="w-full grid grid-cols-2 gap-3 text-sm">
+
+    <!-- Images -->
+    <div class="rounded-xl bg-gray-100 flex flex-col p-4 px-6 border">
+      <p class=" font-jakartaSansBold">Images (up to 10)</p>
+      <span>Get notice by the right buyers with visual examples of your services</span>
+      <div class="w-full flex justify-center flex-col items-center py-7">
+        <div class="bg-white text-center w-[70%] gap-4 flex flex-col justify-center items-center p-[3em] border-2 rounded-xl border-dashed">
+          <img src="/assets/imgs/image.png" alt="">
+          <p class=" font-jakartaSansBold mt-4">Click or drag image into the box upload</p>
+          <span class=" text-gray-400">PG, PNG, max 10mb <br> RecommendationL 850px</span>
+        </div>
+      </div>
+      <div class="w-full flex justify-center items-center mb-10">
+        <div class="w-[70%] flex justify-start">
+          <div class="p-[1.5em] bg-white border-dashed border-2 rounded-lg">
+            <p class="text-[2em]">
+              <fa-icon fa-icon [icon]="faPlus"  size="lg"></fa-icon>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="rounded-xl bg-gray-100 flex flex-col p-4 px-6 border">
+      <p class=" font-jakartaSansBold">Video (up to 2)</p>
+      <span>Capture buyers attention with a video that showcases your service. <br> Please choose a video shorter and smaller than 50MB</span>
+      <div class="w-full flex justify-center flex-col items-center py-7">
+        <div class="bg-white text-center w-[70%] gap-4 flex flex-col justify-center items-center p-[3em] border-2 rounded-xl border-dashed">
+          <img src="/assets/imgs/video.png" alt="">
+          <p class=" font-jakartaSansBold mt-3">Drag & drop a Video or Browse</p>
+          <span class=" text-gray-400">Video shorter than 75 seconds <br> and smaller than 50mb</span>
+        </div>
+      </div>
+      <div class="w-full flex justify-center items-center mb-10">
+        <div class="w-[70%] flex justify-start">
+          <div class="p-[1.5em] bg-white border-dashed border-2 rounded-lg">
+            <p class="text-[2em]">
+              <fa-icon fa-icon [icon]="faPlus"  size="lg"></fa-icon>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full flex gap-3 text-sm">
+    <div class="rounded-xl bg-gray-100 flex flex-col p-4 px-6 gap-5 border w-full">
+      <div class="flex flex-col">
+        <div class="grid grid-cols-4 gap-4">
+          <div class="flex flex-col w-full">
+            <p class=" font-jakartaSansBold">Title</p>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit massa turpis augue sit nulla mollis ut scelerisque.</span>
+          </div>
+          <textarea
+            id="message"
+            rows="4"
+            class="col-span-3 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Write your thoughts here...">
+          </textarea>
+        </div>
+        <div class="flex justify-end w-full py-3">
+          <p>0/75 max</p>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div class="grid grid-cols-4 gap-4">
+          <div class="flex flex-col w-full">
+            <p class=" font-jakartaSansBold">Description</p>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit massa turpis augue sit nulla mollis ut scelerisque.</span>
+          </div>
+          <textarea
+            id="message"
+            rows="4"
+            class="col-span-3 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Write your thoughts here...">
+          </textarea>
+        </div>
+        <div class="flex justify-end w-full py-3">
+          <p>0/5000 max</p>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div class="grid grid-cols-4 gap-4">
+          <div class="flex flex-col w-full">
+            <p class=" font-jakartaSansBold">Category</p>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          </div>
+
+          <div class="relative col-span-3 grid grid-cols-2 gap-3">
+              <div class="relative flex flex-col">
+                <input type="text"
+                  [(ngModel)]="searchBox"
+                  value="" (focus)="onFocus(true)"
+                  (keyup)="onKeyUp($event)"
+                  (focusout)="onFocus(false)"
+                  id="simple-search"
+                  class="bg-gray-50 border w-full  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  pl-4 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Category" required>
+                <app-search-suggestion *ngIf="inFocus" [search]="searchBox"></app-search-suggestion>
+              </div>
+              <div class="relative flex flex-col">
+                <input type="text"
+                  [(ngModel)]="searchBox"
+                  value="" (focus)="onFocus(true)"
+                  (keyup)="onKeyUp($event)"
+                  (focusout)="onFocus(false)"
+                  id="simple-search"
+                  class="bg-gray-50 border w-full  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  pl-4 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Subcategory" required>
+                <app-search-suggestion *ngIf="inFocus" [search]="searchBox"></app-search-suggestion>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col mt-2">
+        <div class="grid grid-cols-4 gap-4">
+          <div class="flex flex-col w-full">
+            <p class=" font-jakartaSansBold">Search Tag</p>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          </div>
+          <div class="flex flex-col w-full col-span-3 gap-3">
+            <p class=" font-jakartaSansBold text-[1em]">Keywords</p>
+            <!-- <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span> -->
+            <div class="flex flex-col flex-wrap">
+              <div class="flex flex-wrap bg-gray-200 w-full rounded-tl-lg rounded-rl-lg p-3 gap-3">
+                <div class="bg-white flex gap-3 rounded-lg py-1 px-4" *ngFor="let k of keys">
+                  <p>{{k}}</p>
+                  <p class=" text-[0.8em] text-gray-400 cursor-pointer hover:text-gray-600" title="remove"><fa-icon fa-icon [icon]="faXmark"  size="lg"></fa-icon></p>
+                </div>
+              </div>
+              <input type="text"
+                [(ngModel)]="keyWords"
+                (keyup)="onKeyUp($event)"
+                value=""
+                id="simple-search"
+                class="bg-gray-50 border w-full  border-gray-300 text-gray-900 text-sm rounded-bl-lg rounded-br-lg focus:ring-blue-500 focus:border-blue-500 block  pl-4 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter keywords" required>
+            </div>
+            <div class="flex justify-start w-full py-1">
+              <p class=" text-[0.9em] text-gray-400">5 tags maximum. Use letters and numbers only. (Press Enter to add the keyword)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ </div>

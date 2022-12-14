@@ -1,13 +1,45 @@
-<div id="recommentdations" class="w-full flex flex-col justify-center items-start my-[4em] p-7 bg-gray-200">
-  <div class="w-full flex justify-between items-center">
+<div id="recommentdations"
+  [class]="!self ? 'p-7' : 'p-7 pt-2'"
+  class="w-full flex flex-col justify-center items-start my-[4em]  bg-gray-200 rounded-lg">
+
+  <!-- client view -->
+  <div *ngIf="!self" class="w-full flex justify-between items-center">
     <h2 class=" text-[1.2em] font-jakartaSansBold">{{title}}</h2>
     <a href="#" class="text-blue-800 hover:mr-2 transition-all">See All</a>
   </div>
-  <div class="grid grid-cols-5 gap-5 w-full mt-10">
+  <div *ngIf="!self" class="grid grid-cols-5 gap-5 w-full mt-10">
     <app-image-card type="light" [slide]="'slide1'" [title]="'Plumber'" [desc]="'Lorem ipsum dolor sir amet'"></app-image-card>
     <app-image-card type="light" [slide]="'slide2'" [title]="'Carpenter'" [desc]="'Lorem ipsum dolor sir amet'"></app-image-card>
     <app-image-card type="light" [slide]="'slide3'" [title]="'Disc Jockey (DJ)'" [desc]="'Lorem ipsum dolor sir amet'"></app-image-card>
     <app-image-card type="light" [slide]="'slide4'" [title]="'Room Cleaning'" [desc]="'Lorem ipsum dolor sir amet'"></app-image-card>
     <app-image-card type="light" [slide]="'slide5'" [title]="'Nail Artist'" [desc]="'Lorem ipsum dolor sir amet'"></app-image-card>
+  </div>
+
+  <!-- freelancer view -->
+  <div *ngIf="self" class="w-full flex justify-between items-center">
+    <div class="w-full text-sm font-medium text-center  text-gray-500 border-b border-gray-300 dark:text-gray-400 dark:border-gray-700">
+        <ul class="flex flex-wrap -mb-px">
+            <li class="mr-2">
+                <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Active Gigs</a>
+            </li>
+            <li class="mr-2">
+                <a href="#" class="inline-block p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500" aria-current="page">Pending Gigs</a>
+            </li>
+            <li class="mr-2">
+                <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Drafts</a>
+            </li>
+        </ul>
+    </div>
+  </div>
+  <div *ngIf="self"  class="grid grid-cols-5 gap-5 w-full mt-10">
+    <app-image-card type="light" [slide]="'slide1'" [title]="'Plumber'" [desc]="'Lorem ipsum dolor sir amet'"></app-image-card>
+    <app-image-card type="light" [slide]="'slide2'" [title]="'Carpenter'" [desc]="'Lorem ipsum dolor sir amet'"></app-image-card>
+    <app-image-card type="light" [slide]="'slide3'" [title]="'Disc Jockey (DJ)'" [desc]="'Lorem ipsum dolor sir amet'"></app-image-card>
+    <div class="cursor-pointer hover:mt-[-1rem] transition-all flex text-gray-500 flex-col justify-center items-center w-full h-[20em]  bg-white shadow-lg">
+      <p class="text-[4em]">
+        <fa-icon  [icon]="faPlus" class=" text-gray-300"></fa-icon>
+      </p>
+      <p class=" text-sm">Add New Gig</p>
+    </div>
   </div>
 </div>
